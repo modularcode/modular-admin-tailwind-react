@@ -6,7 +6,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "deploy": "npm run build-preview && npm run build-docs && gh-pages -d build --repo git@github.com:modularcode/modular-admin-tailwind-react.git --branch gh-pages",
+    "deploy": "npm run build-preview && gh-pages -d build --repo git@github.com:modularcode/modular-admin-tailwind-react.git --branch gh-pages",
     "build-preview": "cross-env PUBLIC_PATH='/' npm run build && echo modular-admin-tailwind-react.modularcode.io > ./build/CNAME",
     "build-docs": "build-storybook --docs -s ./public -o build/docs",
     "build-storybook": "build-storybook",
