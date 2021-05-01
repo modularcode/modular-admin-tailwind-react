@@ -6,8 +6,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "deploy": "npm run build-preview && npm run build-docs && gh-pages -d build --repo git@github.com:modularcode/modular-tailwind-admin-react.git --branch gh-pages",
-    "build-preview": "cross-env PUBLIC_PATH='/' npm run build && echo modular-admin-react.modularcode.io > ./build/CNAME",
+    "deploy": "npm run build-preview && npm run build-docs && gh-pages -d build --repo git@github.com:modularcode/modular-admin-tailwind-react.git --branch gh-pages",
+    "build-preview": "cross-env PUBLIC_PATH='/' npm run build && echo modular-admin-tailwind-react.modularcode.io > ./build/CNAME",
     "build-docs": "build-storybook --docs -s ./public -o build/docs",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6060",
@@ -19,7 +19,7 @@
     "es:prettify": "prettier --config ./.prettierrc.js --write \"src-es/**/*.(js|jsx|ts)\"",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://modular-tailwind-admin-react.modularcode.io",
+  "homepage": "http://modular-admin-tailwind-react.modularcode.io",
   "dependencies": {
     "@rehooks/component-size": "^1.0.3",
     "@types/lodash": "^4.14.168",

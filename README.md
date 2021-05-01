@@ -12,11 +12,11 @@ Free [TailwindCSS](https://tailwindcss.com/) dashboard theme implemented by usin
 
 <p align="center">
   <strong>
-    <a href="https://modular-tailwind-admin-react.modularcode.io/" target="_blank">🚀 View Demo</a>
+    <a href="https://modular-admin-tailwind-react.modularcode.io/" target="_blank">🚀 View Demo</a>
   </strong>
   |
   <strong>
-    <a href="https://modular-tailwind-admin-react.modularcode.io/docs" target="_blank">🤷🏼‍♂️ Read The Docs</a>
+    <a href="https://modular-admin-tailwind-react.modularcode.io/docs" target="_blank">🤷🏼‍♂️ Read The Docs</a>
   </strong>
 </p>
 
