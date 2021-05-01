@@ -1,4 +1,4 @@
-<h1 align="center">Modular Tailwind Admin React</h1>
+<h1 align="center">Modular Admin | Tailwind + React</h1>
 
 <div align="center">
 
