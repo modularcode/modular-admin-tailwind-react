@@ -8,17 +8,12 @@ import '@testing-library/jest-dom'
 import React, { ReactElement } from 'react'
 import { render, RenderOptions } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import { ThemeProvider } from '@material-ui/styles'
 import { IntlProvider } from 'react-intl'
-
-import theme from '../_theme'
 
 const AllTheProviders: React.FC = ({ children }) => {
   return (
     <IntlProvider locale={'en-US'}>
-      <ThemeProvider theme={theme}>
-        <MemoryRouter>{children}</MemoryRouter>
-      </ThemeProvider>
+      <MemoryRouter>{children}</MemoryRouter>
     </IntlProvider>
   )
 }
