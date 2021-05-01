@@ -1,0 +1,100 @@
+{
+  "name": "modular-admin-tailwind-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "deploy": "npm run build-preview && npm run build-docs && gh-pages -d build --repo git@github.com:modularcode/modular-tailwind-admin-react.git --branch gh-pages",
+    "build-preview": "cross-env PUBLIC_PATH='/' npm run build && echo modular-admin-react.modularcode.io > ./build/CNAME",
+    "build-docs": "build-storybook --docs -s ./public -o build/docs",
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6060",
+    "use:es": "symlink-dir ./src-es ./src/",
+    "use:ts": "symlink-dir ./src-ts ./src/",
+    "es:init": "npm run es:clean && npm run es:build && npm run es:prettify",
+    "es:clean": "rimraf src-es/",
+    "es:build": "tsc --project ./tsconfig.to-es.json",
+    "es:prettify": "prettier --config ./.prettierrc.js --write \"src-es/**/*.(js|jsx|ts)\"",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "http://modular-tailwind-admin-react.modularcode.io",
+  "dependencies": {
+    "@rehooks/component-size": "^1.0.3",
+    "@types/lodash": "^4.14.168",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/uuid": "^8.3.0",
+    "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.19.0",
+    "chart.js": "^3.2.0",
+    "cross-env": "^7.0.3",
+    "faker": "^5.5.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^16",
+    "react-chartjs-2": "^3.0.3",
+    "react-dom": "^16",
+    "react-intl": "^5.17.1",
+    "react-router-dom": "^5.2.0",
+    "react-script": "^2.0.5",
+    "react-scripts": "^4.0.3",
+    "store": "^2.0.12",
+    "typescript": "^4.2.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-storysource": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.2.9",
+    "@storybook/source-loader": "^6.2.9",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "babel-loader": "^8.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "fork-ts-checker-webpack-plugin": "^6.2.5",
+    "gh-pages": "^3.1.0",
+    "jest-canvas-mock": "^2.3.1",
+    "msw": "^0.28.2",
+    "prettier": "2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "rimraf": "^3.0.2",
+    "symlink-dir": "^5.0.0",
+    "ts-loader": "^9.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    }
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

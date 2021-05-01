@@ -1,0 +1,116 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import DashboardLayout from './DashboardLayout.js'
+
+import AppHeader from '../../_common/AppHeader'
+import AppSidebar from '../../_common/AppSidebar'
+import AppFooter from '../../_common/AppFooter'
+
+<Meta title="General/Components/DashboardLayout" component={DashboardLayout} />
+
+
+# Dashboard Layout
+
+Application dashboard layout.
+
+export const DemoPlaceholder = ({ children }) => <div
+  style={{
+    padding: 10,
+    top: 10,
+    bottom: 10,
+    left: 10,
+    right: 10,
+    display: 'flex',
+    flex: 1,
+    display: 'flex',
+  }}
+>
+  <div
+    style={{
+      border: '3px dashed #ccc',
+      padding: 10,
+      display: 'flex',
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 10,
+    }}
+  >
+    {children}
+  </div>
+</div>
+
+export const DemoHeader = () => <div 
+  style={{
+    width: '100%',
+    background: 'rgb(152, 173, 153)',
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+>
+  <DemoPlaceholder>
+    Header
+  </DemoPlaceholder>
+</div>
+
+export const DemoSidebar = () => <div 
+  style={{
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    background: '#7e868c',
+    color: '#fff',
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+>
+  <DemoPlaceholder>
+    Sidebar
+  </DemoPlaceholder>
+</div>
+
+export const DemoFooter = () => <div 
+  style={{
+    background: '#bfb8ab',
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+>
+  <DemoPlaceholder>
+    Footer
+  </DemoPlaceholder>
+</div>
+
+<Preview>
+  <Story name="dashboard layout">
+    <DashboardLayout
+      header={DemoHeader}
+      sidebar={DemoSidebar}
+      footer={DemoFooter}
+    >
+      <DemoPlaceholder>
+        Content
+      </DemoPlaceholder>
+    </DashboardLayout>
+  </Story>
+</Preview>
+
+## With real header/footer/sidebar
+
+<Preview>
+  <Story name="with components">
+    <DashboardLayout
+      header={AppHeader}
+      sidebar={AppSidebar}
+      footer={AppFooter}
+    >
+      <DemoPlaceholder>
+        Content
+      </DemoPlaceholder>
+    </DashboardLayout>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={DashboardLayout} />
+
