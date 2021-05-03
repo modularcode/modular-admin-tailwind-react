@@ -1,10 +1,11 @@
 import React from 'react'
-import { HashRouter, BrowserRouter, Route, Switch, RouteProps } from 'react-router-dom' //
+import { HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom' //
 
 import config from './_config'
 
-import DashboardLayout from '_layouts/DashboardLayout'
+import { Auth } from './Auth'
 import { Dashboard } from './Dashboard'
+import DashboardLayout from '_layouts/DashboardLayout'
 
 // Use different router type depending on configuration
 const AppRouterComponent: React.FC = ({ children }) => {
@@ -19,47 +20,14 @@ const AppRouter: React.FC = () => {
   return (
     <AppRouterComponent>
       <Switch>
-        {/* <Route path="/auth" component={Auth} /> */}
-        <RouteWithLayout
-          exact
-          path={`/`}
-          component={Dashboard}
-          layout={DashboardLayout}
-        />
+        <Route path="/auth" component={Auth} />
+        <DashboardLayout>
+          <Switch>
+            <Route path="/" component={Dashboard} />
+          </Switch>
+        </DashboardLayout>
       </Switch>
     </AppRouterComponent>
-  )
-}
-
-export interface RouteWithLayoutProps extends RouteProps {
-  layout: React.ComponentType<any>
-}
-
-const RouteWithLayout: React.FC<RouteWithLayoutProps> = ({
-  component: Component,
-  layout: Layout,
-  children,
-  ...rest
-}) => {
-  return (
-    <Route
-      {...rest}
-      render={(props) => {
-        if (!Component) return null
-
-        if (Layout) {
-          return (
-            <Layout>
-              <Component {...props} />
-            </Layout>
-          )
-        } else {
-          return <Component {...props} />
-        }
-      }}
-    >
-      {children}
-    </Route>
   )
 }
 
