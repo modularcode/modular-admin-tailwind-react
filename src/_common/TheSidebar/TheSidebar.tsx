@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 type TheSidebarProps = {}
 
 const TheSidebar: React.FC<TheSidebarProps> = () => {
+  console.log('render TheSidebar')
+
   return (
     <div className="absolute h-full w-full flex flex-col bg-green-50">
       <div className="h-16 bg-red-100 top-0">Logo</div>
@@ -13,4 +15,4 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
   )
 }
 
-export default TheSidebar
+export default memo(TheSidebar)
