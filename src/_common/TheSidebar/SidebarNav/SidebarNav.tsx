@@ -18,11 +18,16 @@ const SidebarNav = () => {
       {items.map((item) => (
         <NavLink
           to={item.link}
+          exact={item.link === '/'}
           className="
             block px-4 py-3 pl-12 mb-2
-            hover:text-primary-500 rounded-lg hover:bg-primary-50 font-semibold
+            rounded-xl font-semibold
+            text-gray-600
+            hover:text-gray-900
+            hover:bg-primary-50
             transition
           "
+          activeClassName="text-primary-500 hover:text-primary-500 bg-primary-50"
           key={item.name}
         >
           {item.name}
