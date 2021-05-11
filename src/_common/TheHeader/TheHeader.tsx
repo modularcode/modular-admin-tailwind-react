@@ -11,7 +11,7 @@ const TheHeader: React.FC<TheHeaderProps> = ({ onSidebarToggleClick }) => {
     <div
       className="
         TheHeader
-        absolute flex w-full h-full items-center px-4
+        absolute flex w-full h-full items-center px-8
          bg-white
       "
     >

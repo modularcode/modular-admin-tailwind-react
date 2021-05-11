@@ -52,9 +52,16 @@ const DashboardLayout: React.FC = ({ children }) => {
         </div>
       </div>
       {/* Content */}
-      <div id="AppContentContainer" className="w-full min-h-screen flex-auto">
+      <div
+        id="AppContentContainer"
+        className="w-full min-h-screen flex-auto"
+        style={{ backgroundColor: 'rgb(114 142 156 / 5%)' }}
+      >
         {/* Header */}
-        <div id="AppHeaderContainer" className="w-full h-16 sticky top-0 self-start">
+        <div
+          id="AppHeaderContainer"
+          className="w-full h-20 sticky top-0 self-start"
+        >
           <TheHeader onSidebarToggleClick={handleSidebarToggleClick} />
         </div>
         {/* Page */}
