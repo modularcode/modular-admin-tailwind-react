@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './index.css'
+import './_common'
+
 import authService from './_services/authService'
 import api from './_api/'
 

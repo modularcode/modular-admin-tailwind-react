@@ -1,0 +1,3 @@
+import './BaseLink'
+
+export default {}

@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
-
+import GitHubButton from 'react-github-btn'
 import BaseLogo from '_common/BaseLogo'
 import SidebarNav from './SidebarNav'
 
@@ -38,10 +38,18 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
       <div
         className="
           SidebarFooterContainer
-          px-4 py-2 text-sm bg-opacity-75 text-center
+          px-4 py-2 text-sm bg-opacity-75 text-center flex justify-around items-center
+          h-14
         "
       >
-        Sidebar Footer
+        <GitHubButton
+          href="https://github.com/modularcode/modular-admin-tailwind-react"
+          data-icon="octicon-star"
+          data-show-count="true"
+          aria-label="Star modularcode/modular-admin-tailwind-react on GitHub"
+        >
+          Star the project 🚀
+        </GitHubButton>
       </div>
     </div>
   )

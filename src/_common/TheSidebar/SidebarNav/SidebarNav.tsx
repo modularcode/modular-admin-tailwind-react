@@ -10,6 +10,14 @@ const itemsCore = [
     name: 'Administration',
     link: '/administration',
   },
+  {
+    name: 'Settings',
+    link: '/settings',
+  },
+  {
+    name: 'Auth',
+    link: '/auth',
+  },
 ]
 
 const itemsMisc = [
