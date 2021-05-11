@@ -19,7 +19,7 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
             Modular Admin
             <span
               className="
-                absolute bg-indigo-400 opacity-60 text-white rounded-full px-1 py-0 top-full -right-2
+                absolute bg-indigo-400 opacity-60 text-white rounded px-1 py-0 top-full -right-2
                 whitespace-nowrap
                 font-normal
               "
