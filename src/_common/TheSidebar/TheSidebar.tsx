@@ -8,7 +8,7 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
   return (
     <div className="TheSidebar absolute h-full w-full flex flex-col">
       <div className="h-20 flex items-center top-0 px-4">
-        <BaseLogo size={30} className="ml-10 mr-4 text-purple-500" />{' '}
+        <BaseLogo size={30} className="ml-10 mr-4 text-primary-500" />{' '}
         ModularAdmin
       </div>
       <div className="SidebarNavContainer flex-1 overflow-y-auto ">
