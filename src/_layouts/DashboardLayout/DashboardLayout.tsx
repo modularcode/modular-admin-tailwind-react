@@ -27,7 +27,7 @@ const DashboardLayout: React.FC = ({ children }) => {
             w-full lg:w-60 xl:w-72
 
           `,
-          // isSidebarCollapsed && '-left-full',
+          isSidebarCollapsed && '-left-full',
         )}
       >
         <div
