@@ -18,7 +18,11 @@ const SidebarNav = () => {
       {items.map((item) => (
         <NavLink
           to={item.link}
-          className="block px-4 py-3 pl-12 mb-2 hover:text-primary-500 rounded-lg hover:bg-primary-50 font-semibold"
+          className="
+            block px-4 py-3 pl-12 mb-2
+            hover:text-primary-500 rounded-lg hover:bg-primary-50 font-semibold
+            transition
+          "
           key={item.name}
         >
           {item.name}

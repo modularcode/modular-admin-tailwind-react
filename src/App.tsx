@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { IntlProvider } from 'react-intl'
-import { HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom' //
+import {
+  HashRouter,
+  BrowserRouter,
+  Route,
+  Switch,
+  useLocation,
+} from 'react-router-dom' //
 
 import config from './_config'
 
@@ -10,6 +16,12 @@ import { Dashboard } from './Dashboard'
 import DashboardLayout from '_layouts/DashboardLayout'
 
 const App: React.FC = () => {
+  const location = useLocation()
+  // Scroll to top if path changes
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   return (
     <div className="App">
       <Switch>
