@@ -8,7 +8,13 @@ const TheHeader: React.FC<TheHeaderProps> = ({ onSidebarToggleClick }) => {
   console.log('render The Header')
 
   return (
-    <div className="absolute flex w-full h-full item-center p-4 bg-green-50">
+    <div
+      className="
+        TheHeader
+        absolute flex w-full h-full items-center px-4
+         bg-white
+      "
+    >
       <button onClick={onSidebarToggleClick} className="mr-auto lg:hidden">
         Toggle Sidbar
       </button>

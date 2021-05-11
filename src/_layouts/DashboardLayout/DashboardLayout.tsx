@@ -25,6 +25,7 @@ const DashboardLayout: React.FC = ({ children }) => {
             fixed lg:sticky top-0
             lg:block lg:left-0 xl:left-0
             w-full lg:w-60 xl:w-72
+            shadow-xl
 
           `,
           isSidebarCollapsed && '-left-full',
@@ -42,7 +43,7 @@ const DashboardLayout: React.FC = ({ children }) => {
             ease-in-out
             transition-all
             duration-300
-            bg-red
+            bg-white
           `,
             isSidebarCollapsed ? '-left-full md:-left-full' : 'left-0',
           )}
@@ -53,19 +54,11 @@ const DashboardLayout: React.FC = ({ children }) => {
       {/* Content */}
       <div id="AppContentContainer" className="w-full min-h-screen flex-auto">
         {/* Header */}
-        <div
-          id="AppHeaderContainer"
-          className="w-full bg-gray-200 h-16 sticky top-0 self-start"
-        >
+        <div id="AppHeaderContainer" className="w-full h-16 sticky top-0 self-start">
           <TheHeader onSidebarToggleClick={handleSidebarToggleClick} />
         </div>
         {/* Page */}
-        <div
-          id="AppPageContainer"
-          className="
-            bg-yellow-100
-          "
-        >
+        <div id="AppPageContainer" className="">
           {children}
         </div>
         <TheFooter />

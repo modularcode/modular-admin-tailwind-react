@@ -6,9 +6,9 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
   console.log('render TheSidebar')
 
   return (
-    <div className="absolute h-full w-full flex flex-col bg-green-50">
-      <div className="h-16 bg-red-100 top-0">Logo</div>
-      <div id="AppSidebarNav" className="bg-blue-200" style={{ height: 300 }}>
+    <div className="TheSidebar absolute h-full w-full flex flex-col">
+      <div className="h-16 flex items-center top-0 px-4">Logo</div>
+      <div id="AppSidebarNav" className="" style={{ height: 300 }}>
         Nav Menu
       </div>
     </div>
