@@ -9,15 +9,6 @@ import { Administration } from './Administration'
 import { Dashboard } from './Dashboard'
 import DashboardLayout from '_layouts/DashboardLayout'
 
-// Use different router type depending on configuration
-const AppRouterComponent: React.FC = ({ children }) => {
-  return config.navigationType === 'history' ? (
-    <BrowserRouter>{children}</BrowserRouter>
-  ) : (
-    <HashRouter>{children}</HashRouter>
-  )
-}
-
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -31,6 +22,15 @@ const App: React.FC = () => {
         </DashboardLayout>
       </Switch>
     </div>
+  )
+}
+
+// Use different router type depending on configuration
+const AppRouterComponent: React.FC = ({ children }) => {
+  return config.navigationType === 'history' ? (
+    <BrowserRouter>{children}</BrowserRouter>
+  ) : (
+    <HashRouter>{children}</HashRouter>
   )
 }
 
