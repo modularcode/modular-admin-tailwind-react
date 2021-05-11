@@ -1,17 +1,45 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
+import { HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom' //
 
-import AppRouter from './AppRouter'
+import config from './_config'
+
+import { Auth } from './Auth'
+import { Administration } from './Administration'
+import { Dashboard } from './Dashboard'
+import DashboardLayout from '_layouts/DashboardLayout'
+
+// Use different router type depending on configuration
+const AppRouterComponent: React.FC = ({ children }) => {
+  return config.navigationType === 'history' ? (
+    <BrowserRouter>{children}</BrowserRouter>
+  ) : (
+    <HashRouter>{children}</HashRouter>
+  )
+}
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <AppRouter />
+      <Switch>
+        <Route path="/auth" component={Auth} />
+        <DashboardLayout>
+          <Switch>
+            <Route path="/" component={Dashboard} exact />
+            <Route path="/administration" component={Administration} />
+          </Switch>
+        </DashboardLayout>
+      </Switch>
     </div>
   )
 }
-export default () => (
+
+const AppWithPrividers: React.FC = () => (
   <IntlProvider locale={navigator.language}>
-    <App />
+    <AppRouterComponent>
+      <App />
+    </AppRouterComponent>
   </IntlProvider>
 )
+
+export default AppWithPrividers
