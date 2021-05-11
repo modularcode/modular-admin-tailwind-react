@@ -9,6 +9,9 @@ Free [TailwindCSS](https://tailwindcss.com/) dashboard theme implemented by usin
 </div>
 
 
+[![demo](https://user-images.githubusercontent.com/3959008/117872249-84163180-b2af-11eb-948f-00ea8177776b.png)](https://modular-admin-tailwind-react.modularcode.io/)
+
+
 
 <p align="center">
   <strong>
