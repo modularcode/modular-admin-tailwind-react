@@ -35,7 +35,14 @@ const TheSidebar: React.FC<TheSidebarProps> = () => {
       <div className="SidebarNavContainer flex-1 overflow-y-auto ">
         <SidebarNav />
       </div>
-      <div className="SidebarFooterContainer p-4">Sidebar Footer</div>
+      <div
+        className="
+          SidebarFooterContainer
+          px-4 py-2 text-sm bg-opacity-75 text-center
+        "
+      >
+        Sidebar Footer
+      </div>
     </div>
   )
 }
