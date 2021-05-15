@@ -1,14 +1,10 @@
 import React, { useLayoutEffect } from 'react'
 import { IntlProvider } from 'react-intl'
-import {
-  HashRouter,
-  BrowserRouter,
-  Route,
-  Switch,
-  useLocation,
-} from 'react-router-dom' //
+import { HashRouter, BrowserRouter, Route, Switch, useLocation } from 'react-router-dom' //
+import { ApolloProvider } from '@apollo/client/react'
 
 import config from './_config'
+import clientGraphQL from '_api/clientGraphQL'
 
 import { Auth } from './Auth'
 import { Administration } from './Administration'
@@ -47,11 +43,13 @@ const AppRouterComponent: React.FC = ({ children }) => {
 }
 
 const AppWithPrividers: React.FC = () => (
-  <IntlProvider locale={navigator.language}>
-    <AppRouterComponent>
-      <App />
-    </AppRouterComponent>
-  </IntlProvider>
+  <ApolloProvider client={clientGraphQL}>
+    <IntlProvider locale={navigator.language}>
+      <AppRouterComponent>
+        <App />
+      </AppRouterComponent>
+    </IntlProvider>
+  </ApolloProvider>
 )
 
 export default AppWithPrividers

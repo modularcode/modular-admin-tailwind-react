@@ -24,6 +24,7 @@
   },
   "homepage": "http://modular-admin-tailwind-react.modularcode.io",
   "dependencies": {
+    "@apollo/client": "^3.3.18",
     "@headlessui/react": "^1.1.1",
     "@rehooks/component-size": "^1.0.3",
     "@types/faker": "^5.5.3",
@@ -36,6 +37,7 @@
     "clsx": "^1.1.1",
     "cross-env": "^7.0.3",
     "faker": "^5.5.3",
+    "graphql": "^15.5.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
@@ -72,6 +74,7 @@
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/store": "^2.0.2",
+    "apollo-server": "^2.24.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "concurrently": "^6.1.0",

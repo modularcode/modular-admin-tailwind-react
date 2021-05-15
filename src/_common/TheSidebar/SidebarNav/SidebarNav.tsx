@@ -28,8 +28,7 @@ const itemsMisc = [
   },
   {
     name: 'Discuss',
-    link:
-      'https://github.com/modularcode/modular-admin-tailwind-react/discussions',
+    link: 'https://github.com/modularcode/modular-admin-tailwind-react/discussions',
   },
   {
     name: 'View on GitHub',
@@ -83,17 +82,15 @@ const SidebarNav = () => {
     <div id="AppSidebarNav" className="px-4 py-4">
       {/* Sidebar Nav Section */}
       <div className="mb-10">
-        <div className="text-xs text-center text-gray-500 mb-4">
-          Core Modules
-        </div>
+        <div className="text-xs text-center text-gray-500 mb-4">Core Modules</div>
         {itemsCore.map((item) => (
-          <SidebarNavLink item={item} />
+          <SidebarNavLink item={item} key={item.name} />
         ))}
       </div>
       <div className="mb-10">
         <div className="text-xs text-center text-gray-500 mb-4">Misc</div>
         {itemsMisc.map((item) => (
-          <SidebarNavLink item={item} />
+          <SidebarNavLink item={item} key={item.name} />
         ))}
       </div>
     </div>
